@@ -5,10 +5,7 @@ The project implements a concurrent application that uses a socket-based client/
 ## Requirements
 
 - [Python](https://www.python.org/downloads/) >= 3.8.
-- POSIX platform that support _`fork()`_. ( Required by server app ) <sup>[1]</sup>
-
-> [1]. On Windows install [Cygwin](https://www.cygwin.com/) or other tool that emulates
-> Unix-like operative system if your OS distribution don't meets the requirements
+- POSIX platform that support _`fork()`_.
 
 ## `server.py`
 
