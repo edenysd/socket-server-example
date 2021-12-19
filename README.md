@@ -75,6 +75,8 @@ python client.py -h
 
 And pass the desired parameters.
 
+_Please note that the project is intended to be used as simple scripts_
+
 ## License
 
 [MIT](https://spdx.org/licenses/MIT)
