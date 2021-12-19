@@ -11,6 +11,14 @@ The project implements a concurrent application that uses a socket-based client/
 
 `server.py` is the responsible to process the file that `client.py` sends via `socket` and calculates the value of each line. While the server receives the data stream it responds to the client at the same time.
 
+The value is calculated by the formula:
+
+- $(amount\_of\_alphabetic\_characters * 1.5 + amount\_of\_numbers * 2)/amount\_of\_spaces$
+
+But if the string has case insensitive **two** consecutive 'a's the value is remplaced by 1000 and log a message like:
+
+> “Double ‘a’ rule detected >> ‘Aahfiwfbuswbf sdfsibf sdufbas dfysdf‘“.
+
 ## `client.py`
 
 `client.py` is the responsible for creating the file with the random lines (_`chains.txt`_) and sending it to the server in another _thread_, then while the server starts receiving the data it will respond in parallel and we don't need to wait for the stream to finish to get the first results.
@@ -35,14 +43,14 @@ The server runs on localhost on port **9999** then the client connects and sends
 
 ### For example
 
-In the server app you can change:
+In the server app you can setup:
 
 - The port.
 - The buffer size of the socket.
 - The log to the console instead of a file.
 - The log file path.
 
-In the client app you can change:
+In the client app you can setup:
 
 - The host.
 - The port.
