@@ -1,9 +1,9 @@
-import socketserver
-import logging
-import time
-import re
-import struct
 import argparse
+import logging
+import re
+import socketserver
+import struct
+import time
 
 parser = argparse.ArgumentParser()
 

@@ -1,12 +1,12 @@
+import argparse
+import logging
+import os
+import random
 import socket
 import string
-import random
-import os
-import threading
-import logging
-import time
 import struct
-import argparse
+import threading
+import time
 
 parser = argparse.ArgumentParser()
 
