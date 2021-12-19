@@ -51,7 +51,7 @@ pattern_space = re.compile(" ")
 def process_str(cur_str: str):
     """Calculate the string value according to the rules."""
     if pattern_aa.search(cur_str):
-        logging.info('Double \'a\' rule detected \n >> \'%s\'', cur_str)
+        logging.info('Double \'a\' rule detected >> \'%s\'', cur_str)
         return 1000
     number_of_letters = len(pattern_letter.findall(cur_str))
     number_of_digits = len(pattern_number.findall(cur_str))

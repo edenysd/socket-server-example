@@ -46,7 +46,7 @@ PATH_TO_FILE = args.stored_path
 
 LOG_FILE_PATH = args.log_path
 
-LOG_FORMAT = '%(asctime)s -> %(levelname)s:\n%(message)s\n'
+LOG_FORMAT = '%(asctime)s -> %(levelname)s: %(message)s'
 
 STR_CHARACTERS = string.ascii_letters + string.digits
 
@@ -126,7 +126,7 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         while received:
             (value,) = struct.unpack('>f', received)
             line = file.readline().strip()
-            logging.info('\"%s\"\nValue: %f', line, value)
+            logging.info('\"%s\" Value: %f', line, value)
             received = sock.recv(4)
 
     elapsed_from_init_transaction = time.perf_counter() - file_generated_time
